@@ -1,0 +1,11 @@
+GET http://localhost:3001/api/laulut
+
+###
+
+POST http://localhost:3001/api/laulut
+Content-Type: application/json
+
+{
+    "nimi": "biisi2",
+    "sanat": "lalallaaalalalalal"
+}
