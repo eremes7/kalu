@@ -39,6 +39,7 @@ app.post('/api/laulut', (request, response, next) => {
 
     const laulu = new Laulu({
         nimi: body.nimi,
+        numero: body.numero,
         sanat: body.sanat
     })
 
@@ -70,11 +71,11 @@ app.delete('/api/laulut/:id', (request, response, next) => {
 })
 
 app.put('/api/laulut/:id', (request, response, next) => {
-    const { nimi, sanat } = request.body
+    const { nimi, numero, sanat } = request.body
     console.log(request.body)
     Laulu.findByIdAndUpdate(
       request.params.id, 
-      { nimi, sanat },
+      { nimi, numero, sanat },
       //{ new: true, runValidators: true, context: 'query' }
     ) 
       .then(updatedLaulu => {

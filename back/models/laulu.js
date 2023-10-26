@@ -17,6 +17,7 @@ const lauluSchema = new mongoose.Schema({
         type: String,
         minlength: 3
     },
+    numero: Number,
     sanat: {
         type: String,
     }
